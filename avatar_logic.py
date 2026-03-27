@@ -12,20 +12,17 @@ def generate_avatar(input_path, output_path):
         avatar=PyAvataaar()
         import py_avataaars as pa   
         import io
-        # import tensorflow as tf
-        # from tensorflow import keras
-        # load_model = keras.models.load_model
+        
         import cv2 as cv
-        from matplotlib import pyplot as plt
+        
         from deepface import DeepFace
         from sklearn.cluster import KMeans
         from scipy.spatial import distance
         from rembg import remove
         from PIL import Image
-        # import mediapipe as mp
+        
 
-        # input_path = input_path
-        # output_path = "refined_image.png"
+        
 
         with open(input_path, "rb") as input_file:
             input_data = input_file.read()
@@ -187,7 +184,7 @@ def generate_avatar(input_path, output_path):
         chosen_hair_color = find_closest_color(dominant_hair_color)
 
         print(f"Detected hair color: {chosen_hair_color}")
-        
+
         cv2.imwrite('hair_region_detected.png', hair_region)
 
         if hair_region.size == 0:

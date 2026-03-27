@@ -1,2 +1,11 @@
+# Ignore all images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+
+# Ignore folders
 uploads/
 outputs/

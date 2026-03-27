@@ -2,6 +2,8 @@ import os
 from flask import Flask, render_template, request, send_file
 from werkzeug.utils import secure_filename
 from avatar_logic import generate_avatar
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 app = Flask(__name__)
 
